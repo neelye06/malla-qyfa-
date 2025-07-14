@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #fff0f5;
   margin: 20px;
   text-align: center;
@@ -10,41 +10,54 @@ h1 {
 }
 
 h2 {
-  margin-top: 40px;
   color: #c71585;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .malla {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nivel {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
+  gap: 30px;
+}
+
+.semestre {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 220px;
 }
 
 .ramo {
   background-color: #ff69b4;
   color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .ramo:hover {
   background-color: #ff1493;
 }
 
-.info {
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: bold;
+.panel {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.panel p {
+  margin: 0;
   color: #b03060;
+  font-weight: bold;
 }
