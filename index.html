@@ -3,132 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Malla Química y Farmacia - Interactiva</title>
+  <title>Malla QyF USS - Interactiva (Estilo Rosado)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: #ffe6f0;
+      color: #4a004d;
       padding: 20px;
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
     }
-    h1, h2 {
-      color: #005587;
+    h1 {
+      color: #cc0066;
     }
-    .semestre {
-      background: #e6f2ff;
-      padding: 15px;
-      margin: 15px 0;
-      border-left: 5px solid #005587;
-      border-radius: 5px;
+    .curso {
+      background: #ffd6e7;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 6px solid #cc0066;
+      border-radius: 6px;
+      display: none;
+      transition: background-color 0.3s ease;
     }
     label {
       display: block;
-      margin: 5px 0;
+      margin: 4px 0;
+      font-size: 16px;
+    }
+    .completado {
+      text-decoration: line-through;
+      color: #800080;
     }
   </style>
 </head>
 <body>
 
-  <h1>📘 Malla Interactiva - Química y Farmacia USS</h1>
-  <p>Marca los cursos aprobados. El progreso se guarda automáticamente en tu navegador.</p>
-
-  <!-- SEMESTRES 1 AL 10 -->
-  <div class="semestre"><h2>Semestre 1</h2>
-    <label><input type="checkbox" data-id="qg1"> Química General I (DQUI 1045)</label>
-    <label><input type="checkbox" data-id="bioCel"> Biología Celular (DBIO 1091)</label>
-    <label><input type="checkbox" data-id="antro"> Antropología (FORI 0001)</label>
-    <label><input type="checkbox" data-id="introCiencias"> Introducción a las Ciencias Farmacéuticas (QYFA A001)</label>
-    <label><input type="checkbox" data-id="mat1"> Matemáticas (DCEX 00002)</label>
-    <label><input type="checkbox" data-id="habCient"> Integrado de Habilidades Científicas para el QF (QYFA A002)</label>
+  <h1>💗 Malla Interactiva - Química y Farmacia USS</h1>
+  
+  <!-- Cursos con lógica de prerrequisito -->
+  <div class="curso" data-id="matematicas" data-depende="">
+    <label><input type="checkbox" data-id="matematicas"> Matemáticas</label>
   </div>
 
-  <div class="semestre"><h2>Semestre 2</h2>
-    <label><input type="checkbox" data-id="qg2"> Química General II (DQUI 1046)</label>
-    <label><input type="checkbox" data-id="calc"> Cálculo Diferencial (DCEX 0003)</label>
-    <label><input type="checkbox" data-id="fisica"> Física (DCEX 0019)</label>
-    <label><input type="checkbox" data-id="fundQF"> Fundamentos del Quehacer Farmacéutico (QYFA B001)</label>
-    <label><input type="checkbox" data-id="bioest"> Bioestadística (DCEX 0005)</label>
-    <label><input type="checkbox" data-id="etica"> Ética (FORI 0002)</label>
+  <div class="curso" data-id="calculo" data-depende="matematicas">
+    <label><input type="checkbox" data-id="calculo"> Cálculo Diferencial</label>
   </div>
 
-  <div class="semestre"><h2>Semestre 3</h2>
-    <label><input type="checkbox" data-id="saludPob"> Salud Poblacional (DSPU 0012)</label>
-    <label><input type="checkbox" data-id="quimAnal"> Química Analítica CualiCuantitativa (DQUI 1047)</label>
-    <label><input type="checkbox" data-id="quimOrg"> Química Orgánica (DQUI 1052)</label>
-    <label><input type="checkbox" data-id="fisioInt"> Fisiología Integrada (DBIO 1085)</label>
-    <label><input type="checkbox" data-id="fisicoq"> Fisicoquímica (DQUI 1053)</label>
-    <label><input type="checkbox" data-id="gestionPers"> Gestión Personal y Habilidades para la Vida (ELECDGEE 01)</label>
+  <div class="curso" data-id="qg1" data-depende="">
+    <label><input type="checkbox" data-id="qg1"> Química General I</label>
   </div>
 
-  <div class="semestre"><h2>Semestre 4</h2>
-    <label><input type="checkbox" data-id="epidemio"> Epidemiología (DSPU 0014)</label>
-    <label><input type="checkbox" data-id="analInst"> Análisis Químico Instrumental (DQUI 1054)</label>
-    <label><input type="checkbox" data-id="fisioPath"> Fisiopatología (DMOR 0019)</label>
-    <label><input type="checkbox" data-id="bioquim"> Bioquímica General (DBIO 1094)</label>
-    <label><input type="checkbox" data-id="quimOrgAv"> Química Orgánica Avanzada (DQUI 1055)</label>
+  <div class="curso" data-id="qg2" data-depende="qg1">
+    <label><input type="checkbox" data-id="qg2"> Química General II</label>
   </div>
 
-  <div class="semestre"><h2>Semestre 5</h2>
-    <label><input type="checkbox" data-id="farma1"> Farmacología I (DBIO 1087)</label>
-    <label><input type="checkbox" data-id="tecfar1"> Tecnología Farmacéutica I (QYFA E001)</label>
-    <label><input type="checkbox" data-id="qfarm1"> Química Farmacéutica I (QYFA E002)</label>
-    <label><input type="checkbox" data-id="microbio"> Microbiología General (DBIO 1095)</label>
-    <label><input type="checkbox" data-id="personaSoc"> Persona y Sociedad (FORI 0003)</label>
-    <label><input type="checkbox" data-id="saludDig"> Salud Digital (FACU 0004)</label>
+  <div class="curso" data-id="qorganica" data-depende="qg2">
+    <label><input type="checkbox" data-id="qorganica"> Química Orgánica</label>
   </div>
 
-  <div class="semestre"><h2>Semestre 6</h2>
-    <label><input type="checkbox" data-id="farma2"> Farmacología II (DBIO 1096)</label>
-    <label><input type="checkbox" data-id="tecfar2"> Tecnología Farmacéutica II (QYFA F001)</label>
-    <label><input type="checkbox" data-id="qfarm2"> Química Farmacéutica II (QYFA F002)</label>
-    <label><input type="checkbox" data-id="bioetica"> Bioética (DEBI 0002)</label>
-    <label><input type="checkbox" data-id="elect1"> Electivo 1 – Formación Integral (ELECFORI 01)</label>
+  <div class="curso" data-id="qorganica_av" data-depende="qorganica">
+    <label><input type="checkbox" data-id="qorganica_av"> Química Orgánica Avanzada</label>
   </div>
 
-  <div class="semestre"><h2>Semestre 7</h2>
-    <label><input type="checkbox" data-id="elect2"> Electivo 2 – Formación Integral (ELECFORI 02)</label>
-    <label><input type="checkbox" data-id="metod"> Metodología de la Investigación (DSPU 0011)</label>
-    <label><input type="checkbox" data-id="farClin1"> Farmacia Clínica (QYFA G001)</label>
-    <label><input type="checkbox" data-id="fitoterapia"> Farmacognosia y Fitoterapia (QYFA G002)</label>
-    <label><input type="checkbox" data-id="calidad"> Control y Aseguramiento de la Calidad (QYFA G003)</label>
-    <label><input type="checkbox" data-id="legis"> Legislación Farmacéutica (QYFA G004)</label>
+  <div class="curso" data-id="bioquimica" data-depende="qorganica">
+    <label><input type="checkbox" data-id="bioquimica"> Bioquímica General</label>
   </div>
 
-  <div class="semestre"><h2>Semestre 8</h2>
-    <label><input type="checkbox" data-id="farClin2"> Farmacia Clínica II (QYFA H002)</label>
-    <label><input type="checkbox" data-id="toxico"> Toxicología (QYFA H001)</label>
-    <label><input type="checkbox" data-id="biofarm"> Biofarmacia (QYFA H003)</label>
-    <label><input type="checkbox" data-id="asistencial"> Farmacia Asistencial (QYFA H006)</label>
-    <label><input type="checkbox" data-id="elect3"> Electivo 3 – Formación Integral (ELECFORI 03)</label>
+  <div class="curso" data-id="farmacologia1" data-depende="bioquimica">
+    <label><input type="checkbox" data-id="farmacologia1"> Farmacología I</label>
   </div>
 
-  <div class="semestre"><h2>Semestre 9</h2>
-    <label><input type="checkbox" data-id="marketing"> Gestión y Marketing Farmacéutico (QYFA I001)</label>
-    <label><input type="checkbox" data-id="vigilancia"> Farmacovigilancia y Tecnovigilancia (QYFA I002)</label>
-    <label><input type="checkbox" data-id="electPro1"> Electivo 1 – Profesional (ELECQYFA 01)</label>
-    <label><input type="checkbox" data-id="electPro2"> Electivo 2 – Profesional (ELECQYFA 02)</label>
+  <div class="curso" data-id="farmacologia2" data-depende="farmacologia1">
+    <label><input type="checkbox" data-id="farmacologia2"> Farmacología II</label>
   </div>
 
-  <div class="semestre"><h2>Semestre 10</h2>
-    <label><input type="checkbox" data-id="electPro3"> Electivo 3 – Profesional (ELECQYFA 03)</label>
-    <label><input type="checkbox" data-id="practica1"> Práctica I (QYFA F003)</label>
-    <label><input type="checkbox" data-id="practica2"> Práctica II (QYFA H004)</label>
-    <label><input type="checkbox" data-id="hitoFinal"> Hito Evaluativo Final / Internado</label>
+  <div class="curso" data-id="practica1" data-depende="farmacologia2">
+    <label><input type="checkbox" data-id="practica1"> Práctica I</label>
   </div>
 
   <script>
-    // Guardar y cargar progreso con localStorage
-    document.querySelectorAll('input[type=checkbox]').forEach(input => {
-      const id = input.getAttribute('data-id');
-      const saved = localStorage.getItem(id);
-      if (saved === 'true') {
-        input.checked = true;
-      }
-      input.addEventListener('change', () => {
-        localStorage.setItem(id, input.checked);
+    function actualizarCursos() {
+      document.querySelectorAll('.curso').forEach(div => {
+        const id = div.dataset.id;
+        const requisitos = div.dataset.depende ? div.dataset.depende.split(',') : [];
+        const completos = requisitos.every(req => localStorage.getItem(req) === 'true');
+        if (requisitos.length === 0 || completos) {
+          div.style.display = 'block';
+        } else {
+          div.style.display = 'none';
+        }
       });
-    });
+
+      document.querySelectorAll('input[type="checkbox"]').forEach(input => {
+        const id = input.dataset.id;
+        const label = input.closest('label');
+        const saved = localStorage.getItem(id);
+        if (saved === 'true') {
+          input.checked = true;
+          label.classList.add('completado');
+        }
+
+        input.addEventListener('change', () => {
+          localStorage.setItem(id, input.checked);
+          if (input.checked) {
+            label.classList.add('completado');
+          } else {
+            label.classList.remove('completado');
+          }
+          actualizarCursos();
+        });
+      });
+    }
+
+    actualizarCursos();
   </script>
 
 </body>
