@@ -2,19 +2,152 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Curricular Interactiva</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Química y Farmacia - Malla USS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #005587;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .nivel {
+      background-color: #e6f2ff;
+      padding: 10px;
+      margin-top: 20px;
+      border-left: 5px solid #005587;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Malla Curricular</h1>
-  <div class="malla">
-    <div class="ramo" onclick="mostrarInfo('quimica')">Química</div>
-    <div class="ramo" onclick="mostrarInfo('biologia')">Biología</div>
-    <div class="ramo" onclick="mostrarInfo('matematicas')">Matemáticas</div>
+
+  <h1>🧪 Química y Farmacia – USS</h1>
+  <p><strong>Malla Curricular – Decreto Rectoría N°61/2023</strong></p>
+
+  <div class="nivel">
+    <h2>Nivel 1</h2>
+    <ul>
+      <li>Química General I (DQUI 1045)</li>
+      <li>Biología Celular (DBIO 1091)</li>
+      <li>Antropología (FORI 0001)</li>
+      <li>Introducción a las Ciencias Farmacéuticas (QYFA A001)</li>
+      <li>Matemáticas (DCEX 00002)</li>
+      <li>Integrado de Habilidades Científicas para el QF (QYFA A002)</li>
+    </ul>
   </div>
 
-  <div id="infoRamo" class="info"></div>
+  <div class="nivel">
+    <h2>Nivel 2</h2>
+    <ul>
+      <li>Química General II (DQUI 1046)</li>
+      <li>Cálculo Diferencial (DCEX 0003)</li>
+      <li>Física (DCEX 0019)</li>
+      <li>Fundamentos del Quehacer Farmacéutico (QYFA B001)</li>
+      <li>Bioestadística (DCEX 0005)</li>
+      <li>Ética (FORI 0002)</li>
+    </ul>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="nivel">
+    <h2>Nivel 3</h2>
+    <ul>
+      <li>Salud Poblacional (DSPU 0012)</li>
+      <li>Química Analítica Cualicuantitativa (DQUI 1047)</li>
+      <li>Química Orgánica (DQUI 1052)</li>
+      <li>Fisiología Integrada (DBIO 1085)</li>
+      <li>Fisicoquímica (DQUI 1053)</li>
+      <li>Gestión Personal y Habilidades para la Vida (ELECDGEE 01)</li>
+    </ul>
+  </div>
+
+  <div class="nivel">
+    <h2>Nivel 4</h2>
+    <ul>
+      <li>Epidemiología (DSPU 0014)</li>
+      <li>Análisis Químico Instrumental (DQUI 1054)</li>
+      <li>Fisiopatología (DMOR 0019)</li>
+      <li>Bioquímica General (DBIO 1094)</li>
+      <li>Química Orgánica Avanzada (DQUI 1055)</li>
+    </ul>
+  </div>
+
+  <div class="nivel">
+    <h2>Nivel 5</h2>
+    <ul>
+      <li>Farmacología I (DBIO 1087)</li>
+      <li>Tecnología Farmacéutica I (QYFA E001)</li>
+      <li>Química Farmacéutica I (QYFA E002)</li>
+      <li>Microbiología General (DBIO 1095)</li>
+      <li>Persona y Sociedad (FORI 0003)</li>
+      <li>Salud Digital (FACU 0004)</li>
+    </ul>
+  </div>
+
+  <div class="nivel">
+    <h2>Nivel 6</h2>
+    <ul>
+      <li>Farmacología II (DBIO 1096)</li>
+      <li>Tecnología Farmacéutica II (QYFA F001)</li>
+      <li>Química Farmacéutica II (QYFA F002)</li>
+      <li>Bioética (DEBI 0002)</li>
+      <li>Electivo 1 – Formación Integral (ELECFORI 01)</li>
+    </ul>
+  </div>
+
+  <div class="nivel">
+    <h2>Nivel 7</h2>
+    <ul>
+      <li>Electivo 2 – Formación Integral (ELECFORI 02)</li>
+      <li>Metodología de la Investigación (DSPU 0011)</li>
+      <li>Farmacia Clínica (QYFA G001)</li>
+      <li>Farmacognosia y Fitoterapia (QYFA G002)</li>
+      <li>Control y Aseguramiento de la Calidad (QYFA G003)</li>
+      <li>Legislación Farmacéutica (QYFA G004)</li>
+    </ul>
+  </div>
+
+  <div class="nivel">
+    <h2>Nivel 8</h2>
+    <ul>
+      <li>Farmacia Clínica II (QYFA H002)</li>
+      <li>Toxicología (QYFA H001)</li>
+      <li>Biofarmacia (QYFA H003)</li>
+      <li>Farmacia Asistencial (QYFA H006)</li>
+      <li>Electivo 3 – Formación Integral (ELECFORI 03)</li>
+    </ul>
+  </div>
+
+  <div class="nivel">
+    <h2>Nivel 9</h2>
+    <ul>
+      <li>Gestión y Marketing Farmacéutico (QYFA I001)</li>
+      <li>Farmacovigilancia y Tecnovigilancia (QYFA I002)</li>
+      <li>Electivo 1 – Profesional (ELECQYFA 01)</li>
+      <li>Electivo 2 – Profesional (ELECQYFA 02)</li>
+    </ul>
+  </div>
+
+  <div class="nivel">
+    <h2>Nivel 10</h2>
+    <ul>
+      <li>Electivo 3 – Profesional (ELECQYFA 03)</li>
+      <li>Práctica I (QYFA F003)</li>
+      <li>Práctica II (QYFA H004)</li>
+      <li>Hito Evaluativo Final / Internado</li>
+    </ul>
+  </div>
+
+  <p style="margin-top: 40px;"><em>Este archivo HTML representa la malla curricular de la carrera Química y Farmacia (USS). Puedes adaptarlo con enlaces a tus apuntes, trabajos o archivos PDF personales.</em></p>
+
 </body>
 </html>
