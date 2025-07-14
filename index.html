@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Química y Farmacia - Malla USS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Química y Farmacia - Interactiva</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: #f9f9f9;
       padding: 20px;
       max-width: 1000px;
       margin: auto;
@@ -16,138 +15,121 @@
     h1, h2 {
       color: #005587;
     }
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-    .nivel {
-      background-color: #e6f2ff;
-      padding: 10px;
-      margin-top: 20px;
+    .semestre {
+      background: #e6f2ff;
+      padding: 15px;
+      margin: 15px 0;
       border-left: 5px solid #005587;
       border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
 
-  <h1>🧪 Química y Farmacia – USS</h1>
-  <p><strong>Malla Curricular – Decreto Rectoría N°61/2023</strong></p>
+  <h1>📘 Malla Interactiva - Química y Farmacia USS</h1>
+  <p>Marca los cursos aprobados. El progreso se guarda automáticamente en tu navegador.</p>
 
-  <div class="nivel">
-    <h2>Nivel 1</h2>
-    <ul>
-      <li>Química General I (DQUI 1045)</li>
-      <li>Biología Celular (DBIO 1091)</li>
-      <li>Antropología (FORI 0001)</li>
-      <li>Introducción a las Ciencias Farmacéuticas (QYFA A001)</li>
-      <li>Matemáticas (DCEX 00002)</li>
-      <li>Integrado de Habilidades Científicas para el QF (QYFA A002)</li>
-    </ul>
+  <!-- SEMESTRES 1 AL 10 -->
+  <div class="semestre"><h2>Semestre 1</h2>
+    <label><input type="checkbox" data-id="qg1"> Química General I (DQUI 1045)</label>
+    <label><input type="checkbox" data-id="bioCel"> Biología Celular (DBIO 1091)</label>
+    <label><input type="checkbox" data-id="antro"> Antropología (FORI 0001)</label>
+    <label><input type="checkbox" data-id="introCiencias"> Introducción a las Ciencias Farmacéuticas (QYFA A001)</label>
+    <label><input type="checkbox" data-id="mat1"> Matemáticas (DCEX 00002)</label>
+    <label><input type="checkbox" data-id="habCient"> Integrado de Habilidades Científicas para el QF (QYFA A002)</label>
   </div>
 
-  <div class="nivel">
-    <h2>Nivel 2</h2>
-    <ul>
-      <li>Química General II (DQUI 1046)</li>
-      <li>Cálculo Diferencial (DCEX 0003)</li>
-      <li>Física (DCEX 0019)</li>
-      <li>Fundamentos del Quehacer Farmacéutico (QYFA B001)</li>
-      <li>Bioestadística (DCEX 0005)</li>
-      <li>Ética (FORI 0002)</li>
-    </ul>
+  <div class="semestre"><h2>Semestre 2</h2>
+    <label><input type="checkbox" data-id="qg2"> Química General II (DQUI 1046)</label>
+    <label><input type="checkbox" data-id="calc"> Cálculo Diferencial (DCEX 0003)</label>
+    <label><input type="checkbox" data-id="fisica"> Física (DCEX 0019)</label>
+    <label><input type="checkbox" data-id="fundQF"> Fundamentos del Quehacer Farmacéutico (QYFA B001)</label>
+    <label><input type="checkbox" data-id="bioest"> Bioestadística (DCEX 0005)</label>
+    <label><input type="checkbox" data-id="etica"> Ética (FORI 0002)</label>
   </div>
 
-  <div class="nivel">
-    <h2>Nivel 3</h2>
-    <ul>
-      <li>Salud Poblacional (DSPU 0012)</li>
-      <li>Química Analítica Cualicuantitativa (DQUI 1047)</li>
-      <li>Química Orgánica (DQUI 1052)</li>
-      <li>Fisiología Integrada (DBIO 1085)</li>
-      <li>Fisicoquímica (DQUI 1053)</li>
-      <li>Gestión Personal y Habilidades para la Vida (ELECDGEE 01)</li>
-    </ul>
+  <div class="semestre"><h2>Semestre 3</h2>
+    <label><input type="checkbox" data-id="saludPob"> Salud Poblacional (DSPU 0012)</label>
+    <label><input type="checkbox" data-id="quimAnal"> Química Analítica CualiCuantitativa (DQUI 1047)</label>
+    <label><input type="checkbox" data-id="quimOrg"> Química Orgánica (DQUI 1052)</label>
+    <label><input type="checkbox" data-id="fisioInt"> Fisiología Integrada (DBIO 1085)</label>
+    <label><input type="checkbox" data-id="fisicoq"> Fisicoquímica (DQUI 1053)</label>
+    <label><input type="checkbox" data-id="gestionPers"> Gestión Personal y Habilidades para la Vida (ELECDGEE 01)</label>
   </div>
 
-  <div class="nivel">
-    <h2>Nivel 4</h2>
-    <ul>
-      <li>Epidemiología (DSPU 0014)</li>
-      <li>Análisis Químico Instrumental (DQUI 1054)</li>
-      <li>Fisiopatología (DMOR 0019)</li>
-      <li>Bioquímica General (DBIO 1094)</li>
-      <li>Química Orgánica Avanzada (DQUI 1055)</li>
-    </ul>
+  <div class="semestre"><h2>Semestre 4</h2>
+    <label><input type="checkbox" data-id="epidemio"> Epidemiología (DSPU 0014)</label>
+    <label><input type="checkbox" data-id="analInst"> Análisis Químico Instrumental (DQUI 1054)</label>
+    <label><input type="checkbox" data-id="fisioPath"> Fisiopatología (DMOR 0019)</label>
+    <label><input type="checkbox" data-id="bioquim"> Bioquímica General (DBIO 1094)</label>
+    <label><input type="checkbox" data-id="quimOrgAv"> Química Orgánica Avanzada (DQUI 1055)</label>
   </div>
 
-  <div class="nivel">
-    <h2>Nivel 5</h2>
-    <ul>
-      <li>Farmacología I (DBIO 1087)</li>
-      <li>Tecnología Farmacéutica I (QYFA E001)</li>
-      <li>Química Farmacéutica I (QYFA E002)</li>
-      <li>Microbiología General (DBIO 1095)</li>
-      <li>Persona y Sociedad (FORI 0003)</li>
-      <li>Salud Digital (FACU 0004)</li>
-    </ul>
+  <div class="semestre"><h2>Semestre 5</h2>
+    <label><input type="checkbox" data-id="farma1"> Farmacología I (DBIO 1087)</label>
+    <label><input type="checkbox" data-id="tecfar1"> Tecnología Farmacéutica I (QYFA E001)</label>
+    <label><input type="checkbox" data-id="qfarm1"> Química Farmacéutica I (QYFA E002)</label>
+    <label><input type="checkbox" data-id="microbio"> Microbiología General (DBIO 1095)</label>
+    <label><input type="checkbox" data-id="personaSoc"> Persona y Sociedad (FORI 0003)</label>
+    <label><input type="checkbox" data-id="saludDig"> Salud Digital (FACU 0004)</label>
   </div>
 
-  <div class="nivel">
-    <h2>Nivel 6</h2>
-    <ul>
-      <li>Farmacología II (DBIO 1096)</li>
-      <li>Tecnología Farmacéutica II (QYFA F001)</li>
-      <li>Química Farmacéutica II (QYFA F002)</li>
-      <li>Bioética (DEBI 0002)</li>
-      <li>Electivo 1 – Formación Integral (ELECFORI 01)</li>
-    </ul>
+  <div class="semestre"><h2>Semestre 6</h2>
+    <label><input type="checkbox" data-id="farma2"> Farmacología II (DBIO 1096)</label>
+    <label><input type="checkbox" data-id="tecfar2"> Tecnología Farmacéutica II (QYFA F001)</label>
+    <label><input type="checkbox" data-id="qfarm2"> Química Farmacéutica II (QYFA F002)</label>
+    <label><input type="checkbox" data-id="bioetica"> Bioética (DEBI 0002)</label>
+    <label><input type="checkbox" data-id="elect1"> Electivo 1 – Formación Integral (ELECFORI 01)</label>
   </div>
 
-  <div class="nivel">
-    <h2>Nivel 7</h2>
-    <ul>
-      <li>Electivo 2 – Formación Integral (ELECFORI 02)</li>
-      <li>Metodología de la Investigación (DSPU 0011)</li>
-      <li>Farmacia Clínica (QYFA G001)</li>
-      <li>Farmacognosia y Fitoterapia (QYFA G002)</li>
-      <li>Control y Aseguramiento de la Calidad (QYFA G003)</li>
-      <li>Legislación Farmacéutica (QYFA G004)</li>
-    </ul>
+  <div class="semestre"><h2>Semestre 7</h2>
+    <label><input type="checkbox" data-id="elect2"> Electivo 2 – Formación Integral (ELECFORI 02)</label>
+    <label><input type="checkbox" data-id="metod"> Metodología de la Investigación (DSPU 0011)</label>
+    <label><input type="checkbox" data-id="farClin1"> Farmacia Clínica (QYFA G001)</label>
+    <label><input type="checkbox" data-id="fitoterapia"> Farmacognosia y Fitoterapia (QYFA G002)</label>
+    <label><input type="checkbox" data-id="calidad"> Control y Aseguramiento de la Calidad (QYFA G003)</label>
+    <label><input type="checkbox" data-id="legis"> Legislación Farmacéutica (QYFA G004)</label>
   </div>
 
-  <div class="nivel">
-    <h2>Nivel 8</h2>
-    <ul>
-      <li>Farmacia Clínica II (QYFA H002)</li>
-      <li>Toxicología (QYFA H001)</li>
-      <li>Biofarmacia (QYFA H003)</li>
-      <li>Farmacia Asistencial (QYFA H006)</li>
-      <li>Electivo 3 – Formación Integral (ELECFORI 03)</li>
-    </ul>
+  <div class="semestre"><h2>Semestre 8</h2>
+    <label><input type="checkbox" data-id="farClin2"> Farmacia Clínica II (QYFA H002)</label>
+    <label><input type="checkbox" data-id="toxico"> Toxicología (QYFA H001)</label>
+    <label><input type="checkbox" data-id="biofarm"> Biofarmacia (QYFA H003)</label>
+    <label><input type="checkbox" data-id="asistencial"> Farmacia Asistencial (QYFA H006)</label>
+    <label><input type="checkbox" data-id="elect3"> Electivo 3 – Formación Integral (ELECFORI 03)</label>
   </div>
 
-  <div class="nivel">
-    <h2>Nivel 9</h2>
-    <ul>
-      <li>Gestión y Marketing Farmacéutico (QYFA I001)</li>
-      <li>Farmacovigilancia y Tecnovigilancia (QYFA I002)</li>
-      <li>Electivo 1 – Profesional (ELECQYFA 01)</li>
-      <li>Electivo 2 – Profesional (ELECQYFA 02)</li>
-    </ul>
+  <div class="semestre"><h2>Semestre 9</h2>
+    <label><input type="checkbox" data-id="marketing"> Gestión y Marketing Farmacéutico (QYFA I001)</label>
+    <label><input type="checkbox" data-id="vigilancia"> Farmacovigilancia y Tecnovigilancia (QYFA I002)</label>
+    <label><input type="checkbox" data-id="electPro1"> Electivo 1 – Profesional (ELECQYFA 01)</label>
+    <label><input type="checkbox" data-id="electPro2"> Electivo 2 – Profesional (ELECQYFA 02)</label>
   </div>
 
-  <div class="nivel">
-    <h2>Nivel 10</h2>
-    <ul>
-      <li>Electivo 3 – Profesional (ELECQYFA 03)</li>
-      <li>Práctica I (QYFA F003)</li>
-      <li>Práctica II (QYFA H004)</li>
-      <li>Hito Evaluativo Final / Internado</li>
-    </ul>
+  <div class="semestre"><h2>Semestre 10</h2>
+    <label><input type="checkbox" data-id="electPro3"> Electivo 3 – Profesional (ELECQYFA 03)</label>
+    <label><input type="checkbox" data-id="practica1"> Práctica I (QYFA F003)</label>
+    <label><input type="checkbox" data-id="practica2"> Práctica II (QYFA H004)</label>
+    <label><input type="checkbox" data-id="hitoFinal"> Hito Evaluativo Final / Internado</label>
   </div>
 
-  <p style="margin-top: 40px;"><em>Este archivo HTML representa la malla curricular de la carrera Química y Farmacia (USS). Puedes adaptarlo con enlaces a tus apuntes, trabajos o archivos PDF personales.</em></p>
+  <script>
+    // Guardar y cargar progreso con localStorage
+    document.querySelectorAll('input[type=checkbox]').forEach(input => {
+      const id = input.getAttribute('data-id');
+      const saved = localStorage.getItem(id);
+      if (saved === 'true') {
+        input.checked = true;
+      }
+      input.addEventListener('change', () => {
+        localStorage.setItem(id, input.checked);
+      });
+    });
+  </script>
 
 </body>
 </html>
