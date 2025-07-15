@@ -14,9 +14,10 @@ h1 {
 
 .contenedor-malla {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; 
+  overflow-x: auto;
   gap: 20px;
-  justify-content: center;
+  padding: 10px;
 }
 
 .nivel {
