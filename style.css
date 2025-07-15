@@ -29,6 +29,7 @@ h1 {
   min-width: 340px;
   flex-shrink: 0;
   box-shadow: 2px 2px 12px #f8bbd088;
+}
 
 .nivel h2 {
   text-align: center;
