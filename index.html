@@ -1,122 +1,73 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Malla QyF USS - Interactiva (Estilo Rosado)</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffe6f0;
-      color: #4a004d;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1 {
-      color: #cc0066;
-    }
-    .curso {
-      background: #ffd6e7;
-      padding: 10px;
-      margin: 10px 0;
-      border-left: 6px solid #cc0066;
-      border-radius: 6px;
-      display: none;
-      transition: background-color 0.3s ease;
-    }
-    label {
-      display: block;
-      margin: 4px 0;
-      font-size: 16px;
-    }
-    .completado {
-      text-decoration: line-through;
-      color: #800080;
-    }
-  </style>
-</head>
-<body>
+<div class="contenedor-malla">
+  <!-- Semestre 1 -->
+  <div class="ramo bloqueado" id="ramo_Nivel1_1" data-prerrequisitos="">Química General I</div>
+  <div class="ramo bloqueado" id="ramo_Nivel1_2" data-prerrequisitos="">Biología Celular</div>
+  <div class="ramo bloqueado" id="ramo_Nivel1_3" data-prerrequisitos="">Antropología</div>
+  <div class="ramo bloqueado" id="ramo_Nivel1_4" data-prerrequisitos="">Introducción a las Ciencias Farmacéuticas</div>
+  <div class="ramo bloqueado" id="ramo_Nivel1_5" data-prerrequisitos="">Matemáticas</div>
+  <div class="ramo bloqueado" id="ramo_Nivel1_6" data-prerrequisitos="">Integrado de Habilidades Científicas</div>
 
-  <h1>💗 Malla Interactiva - Química y Farmacia USS</h1>
-  
-  <!-- Cursos con lógica de prerrequisito -->
-  <div class="curso" data-id="matematicas" data-depende="">
-    <label><input type="checkbox" data-id="matematicas"> Matemáticas</label>
-  </div>
+  <!-- Semestre 2 -->
+  <div class="ramo bloqueado" id="ramo_Nivel2_1" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Química General II</div>
+  <div class="ramo bloqueado" id="ramo_Nivel2_2" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Cálculo Diferencial</div>
+  <div class="ramo bloqueado" id="ramo_Nivel2_3" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Física</div>
+  <div class="ramo bloqueado" id="ramo_Nivel2_4" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Fundamentos del Quehacer Farmacéutico</div>
+  <div class="ramo bloqueado" id="ramo_Nivel2_5" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Bioestadística</div>
+  <div class="ramo bloqueado" id="ramo_Nivel2_6" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Ética</div>
 
-  <div class="curso" data-id="calculo" data-depende="matematicas">
-    <label><input type="checkbox" data-id="calculo"> Cálculo Diferencial</label>
-  </div>
+  <!-- Semestre 3 -->
+  <div class="ramo bloqueado" id="ramo_Nivel3_1" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Salud Poblacional</div>
+  <div class="ramo bloqueado" id="ramo_Nivel3_2" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Química Analítica Cualicuantitativa</div>
+  <div class="ramo bloqueado" id="ramo_Nivel3_3" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Química Orgánica</div>
+  <div class="ramo bloqueado" id="ramo_Nivel3_4" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Fisiología Integrada</div>
+  <div class="ramo bloqueado" id="ramo_Nivel3_5" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Fisicoquímica</div>
 
-  <div class="curso" data-id="qg1" data-depende="">
-    <label><input type="checkbox" data-id="qg1"> Química General I</label>
-  </div>
+  <!-- Semestre 4 -->
+  <div class="ramo bloqueado" id="ramo_Nivel4_1" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Gestión Personal y Habilidades para la Vida</div>
+  <div class="ramo bloqueado" id="ramo_Nivel4_2" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Epidemiología</div>
+  <div class="ramo bloqueado" id="ramo_Nivel4_3" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Análisis Químico Instrumental</div>
+  <div class="ramo bloqueado" id="ramo_Nivel4_4" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Fisiopatología</div>
+  <div class="ramo bloqueado" id="ramo_Nivel4_5" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Bioquímica General</div>
+  <div class="ramo bloqueado" id="ramo_Nivel4_6" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Química Orgánica Avanzada</div>
 
-  <div class="curso" data-id="qg2" data-depende="qg1">
-    <label><input type="checkbox" data-id="qg2"> Química General II</label>
-  </div>
+  <!--Semestre 5 -->
+  <div class="ramo bloqueado" id="ramo_Nivel5_1" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Farmacología I</div>
+  <div class="ramo bloqueado" id="ramo_Nivel5_2" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Tecnología Farmacéutica I</div>
+  <div class="ramo bloqueado" id="ramo_Nivel5_3" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Química Farmacéutica I</div>
+  <div class="ramo bloqueado" id="ramo_Nivel5_4" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Microbiología General</div>
+  <div class="ramo bloqueado" id="ramo_Nivel5_5" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Persona y Sociedad</div>
+  <div class="ramo bloqueado" id="ramo_Nivel5_6" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Salud Digital</div>
 
-  <div class="curso" data-id="qorganica" data-depende="qg2">
-    <label><input type="checkbox" data-id="qorganica"> Química Orgánica</label>
-  </div>
+  <!-- Semestre 6 -->
+  <div class="ramo bloqueado" id="ramo_Nivel6_1" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Farmacología II</div>
+  <div class="ramo bloqueado" id="ramo_Nivel6_2" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Tecnología Farmacéutica II</div>
+  <div class="ramo bloqueado" id="ramo_Nivel6_3" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Química Farmacéutica II</div>
+  <div class="ramo bloqueado" id="ramo_Nivel6_4" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Bioética</div>
+  <div class="ramo bloqueado" id="ramo_Nivel6_5" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Electivo 1 Formación Integral</div>
 
-  <div class="curso" data-id="qorganica_av" data-depende="qorganica">
-    <label><input type="checkbox" data-id="qorganica_av"> Química Orgánica Avanzada</label>
-  </div>
+  <!-- Semestre 7 -->
+  <div class="ramo bloqueado" id="ramo_Nivel7_1" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Electivo 2 Formación Integral</div>
+  <div class="ramo bloqueado" id="ramo_Nivel7_2" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Metodología de la Investigación</div>
+  <div class="ramo bloqueado" id="ramo_Nivel7_3" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Farmacia Clínica</div>
+  <div class="ramo bloqueado" id="ramo_Nivel7_4" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Farmacognosia y Fitoterapia</div>
+  <div class="ramo bloqueado" id="ramo_Nivel7_5" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Control y Aseguramiento de la Calidad</div>
+  <div class="ramo bloqueado" id="ramo_Nivel7_6" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Legislación Farmacéutica</div>
 
-  <div class="curso" data-id="bioquimica" data-depende="qorganica">
-    <label><input type="checkbox" data-id="bioquimica"> Bioquímica General</label>
-  </div>
+  <!-- Semestre 8 -->
+  <div class="ramo bloqueado" id="ramo_Nivel8_1" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Farmacia Clínica</div>
+  <div class="ramo bloqueado" id="ramo_Nivel8_2" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Toxicología</div>
+  <div class="ramo bloqueado" id="ramo_Nivel8_3" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Biofarmacia</div>
+  <div class="ramo bloqueado" id="ramo_Nivel8_4" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Farmacia Asistencial</div>
+  <div class="ramo bloqueado" id="ramo_Nivel8_5" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Gestión y Marketing Farmacéutico</div>
+  <div class="ramo bloqueado" id="ramo_Nivel8_6" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Farmacovigilancia y Tecnovigilancia</div>
+  <div class="ramo bloqueado" id="ramo_Nivel8_7" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Electivo 3 Formación Integral</div>
 
-  <div class="curso" data-id="farmacologia1" data-depende="bioquimica">
-    <label><input type="checkbox" data-id="farmacologia1"> Farmacología I</label>
-  </div>
+  <!-- Semestre 9 -->
+  <div class="ramo bloqueado" id="ramo_Nivel9_1" data-prerrequisitos="ramo_Nivel8_1,ramo_Nivel8_2,ramo_Nivel8_3,ramo_Nivel8_4,ramo_Nivel8_5,ramo_Nivel8_6,ramo_Nivel8_7">Electivo 1 (Disciplina)</div>
+  <div class="ramo bloqueado" id="ramo_Nivel9_2" data-prerrequisitos="ramo_Nivel8_1,ramo_Nivel8_2,ramo_Nivel8_3,ramo_Nivel8_4,ramo_Nivel8_5,ramo_Nivel8_6,ramo_Nivel8_7">Electivo 2 (Disciplina)</div>
+  <div class="ramo bloqueado" id="ramo_Nivel9_3" data-prerrequisitos="ramo_Nivel8_1,ramo_Nivel8_2,ramo_Nivel8_3,ramo_Nivel8_4,ramo_Nivel8_5,ramo_Nivel8_6,ramo_Nivel8_7">Electivo 3 (Disciplina)</div>
+  <div class="ramo bloqueado" id="ramo_Nivel9_4" data-prerrequisitos="ramo_Nivel8_1,ramo_Nivel8_2,ramo_Nivel8_3,ramo_Nivel8_4,ramo_Nivel8_5,ramo_Nivel8_6,ramo_Nivel8_7">Práctica I</div>
 
-  <div class="curso" data-id="farmacologia2" data-depende="farmacologia1">
-    <label><input type="checkbox" data-id="farmacologia2"> Farmacología II</label>
-  </div>
-
-  <div class="curso" data-id="practica1" data-depende="farmacologia2">
-    <label><input type="checkbox" data-id="practica1"> Práctica I</label>
-  </div>
-
-  <script>
-    function actualizarCursos() {
-      document.querySelectorAll('.curso').forEach(div => {
-        const id = div.dataset.id;
-        const requisitos = div.dataset.depende ? div.dataset.depende.split(',') : [];
-        const completos = requisitos.every(req => localStorage.getItem(req) === 'true');
-        if (requisitos.length === 0 || completos) {
-          div.style.display = 'block';
-        } else {
-          div.style.display = 'none';
-        }
-      });
-
-      document.querySelectorAll('input[type="checkbox"]').forEach(input => {
-        const id = input.dataset.id;
-        const label = input.closest('label');
-        const saved = localStorage.getItem(id);
-        if (saved === 'true') {
-          input.checked = true;
-          label.classList.add('completado');
-        }
-
-        input.addEventListener('change', () => {
-          localStorage.setItem(id, input.checked);
-          if (input.checked) {
-            label.classList.add('completado');
-          } else {
-            label.classList.remove('completado');
-          }
-          actualizarCursos();
-        });
-      });
-    }
-
-    actualizarCursos();
-  </script>
-
-</body>
-</html>
+  <!-- Semestre 10 -->
+  <div class="ramo bloqueado" id="ramo_Nivel10_1" data-prerrequisitos="ramo_Nivel9_1,ramo_Nivel9_2,ramo_Nivel9_3,ramo_Nivel9_4">Práctica II</div>
+</div>
