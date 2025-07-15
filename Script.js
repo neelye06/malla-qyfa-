@@ -1,32 +1,18 @@
-<script>
-  function actualizarCursos() {
-    document.querySelectorAll('.curso').forEach(div => {
-      const id = div.dataset.id;
-      const requisitos = div.dataset.depende ? div.dataset.depende.split(',') : [];
-      const completos = requisitos.every(req => localStorage.getItem(req) === 'true');
-      div.style.display = (requisitos.length === 0 || completos) ? 'block' : 'none';
-    });
+document.querySelectorAll('.ramo').forEach(ramo => {
+  ramo.addEventListener('click', () => {
+    ramo.classList.toggle('aprobado');
 
-    document.querySelectorAll('input[type="checkbox"]').forEach(input => {
-      const id = input.dataset.id;
-      const label = input.closest('label');
-      const guardado = localStorage.getItem(id);
-      if (guardado === 'true') {
-        input.checked = true;
-        label.classList.add('completado');
-      }
-
-      input.addEventListener('change', () => {
-        localStorage.setItem(id, input.checked);
-        if (input.checked) {
-          label.classList.add('completado');
-        } else {
-          label.classList.remove('completado');
-        }
-        actualizarCursos();
+    // Verificar qué ramos desbloquear
+    document.querySelectorAll('.ramo.bloqueado').forEach(pendiente => {
+      const requisitos = pendiente.dataset.prerrequisitos.split(',').filter(r => r);
+      const todosCumplidos = requisitos.every(id => {
+        const elem = document.getElementById(id);
+        return elem && elem.classList.contains('aprobado');
       });
-    });
-  }
 
-  actualizarCursos();
-</script>
+      if (todosCumplidos) {
+        pendiente.classList.remove('bloqueado');
+      }
+    });
+  });
+});
