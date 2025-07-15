@@ -28,7 +28,7 @@ h1 {
   width: 300px;
   min-width: 300px;
   flex-shrink: 0;
-  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #8e024b;
   transition: transform 0.2s;
   
 }
@@ -49,8 +49,8 @@ h1 {
   text-align: center;
   transition: 0.3s ease;
   font-weight: bold;
-  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 2px #8e024b;
+  box-shadow: 1px 1px 2px #8e024b;
+  
 }
 
 .ramo.bloqueado {
@@ -68,7 +68,7 @@ h1 {
 }
 
 .ramo:not(.bloqueado):hover {
-  background-color: #ad1457;
+  background-color: #f3a0bc;
 }
 .titulo {
   text-align: center;
