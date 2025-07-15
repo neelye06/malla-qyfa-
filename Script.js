@@ -1,18 +1,30 @@
-document.querySelectorAll('.ramo').forEach(ramo => {
-  ramo.addEventListener('click', () => {
-    ramo.classList.toggle('aprobado');
+document.addEventListener("DOMContentLoaded", () => {
+  const ramos = document.querySelectorAll(".ramo");
 
-    // Verificar qué ramos desbloquear
-    document.querySelectorAll('.ramo.bloqueado').forEach(pendiente => {
-      const requisitos = pendiente.dataset.prerrequisitos.split(',').filter(r => r);
-      const todosCumplidos = requisitos.every(id => {
-        const elem = document.getElementById(id);
-        return elem && elem.classList.contains('aprobado');
+  function verificarBloqueos() {
+    ramos.forEach(ramo => {
+      const requisitos = ramo.dataset.prerrequisitos.split(',').filter(id => id);
+      const aprobados = requisitos.every(id => {
+        const prereq = document.getElementById(id);
+        return prereq && prereq.classList.contains("aprobado");
       });
 
-      if (todosCumplidos) {
-        pendiente.classList.remove('bloqueado');
+      if (requisitos.length === 0 || aprobados) {
+        ramo.classList.remove("bloqueado");
+      } else {
+        ramo.classList.add("bloqueado");
       }
     });
+  }
+
+  ramos.forEach(ramo => {
+    ramo.addEventListener("click", () => {
+      if (ramo.classList.contains("bloqueado")) return;
+
+      ramo.classList.toggle("aprobado");
+      verificarBloqueos();
+    });
   });
+
+  verificarBloqueos();
 });
