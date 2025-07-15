@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   ramos.forEach(ramo => {
     ramo.addEventListener("click", () => {
       if (ramo.classList.contains("bloqueado")) return;
-
       ramo.classList.toggle("aprobado");
       verificarBloqueos();
     });
