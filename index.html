@@ -1,73 +1,117 @@
-<div class="contenedor-malla">
-  <!-- Semestre 1 -->
-  <div class="ramo bloqueado" id="ramo_Nivel1_1" data-prerrequisitos="">Química General I</div>
-  <div class="ramo bloqueado" id="ramo_Nivel1_2" data-prerrequisitos="">Biología Celular</div>
-  <div class="ramo bloqueado" id="ramo_Nivel1_3" data-prerrequisitos="">Antropología</div>
-  <div class="ramo bloqueado" id="ramo_Nivel1_4" data-prerrequisitos="">Introducción a las Ciencias Farmacéuticas</div>
-  <div class="ramo bloqueado" id="ramo_Nivel1_5" data-prerrequisitos="">Matemáticas</div>
-  <div class="ramo bloqueado" id="ramo_Nivel1_6" data-prerrequisitos="">Integrado de Habilidades Científicas</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Química y Farmacia - USS</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Malla Interactiva Química y Farmacia</h1>
+  
+  <!-- SEMESTRE 1 -->
+  <div class="nivel">
+    <h2>Nivel 1</h2>
+    <div class="ramo" id="ramo_N1_1" data-prerrequisitos="">Química General I</div>
+    <div class="ramo" id="ramo_N1_2" data-prerrequisitos="">Biología Celular</div>
+    <div class="ramo" id="ramo_N1_3" data-prerrequisitos="">Antropología</div>
+    <div class="ramo" id="ramo_N1_4" data-prerrequisitos="">Introducción a las Ciencias Farmacéuticas</div>
+    <div class="ramo" id="ramo_N1_5" data-prerrequisitos="">Matemáticas</div>
+    <div class="ramo" id="ramo_N1_6" data-prerrequisitos="">Integrado de Habilidades Científicas</div>
+  </div>
 
-  <!-- Semestre 2 -->
-  <div class="ramo bloqueado" id="ramo_Nivel2_1" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Química General II</div>
-  <div class="ramo bloqueado" id="ramo_Nivel2_2" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Cálculo Diferencial</div>
-  <div class="ramo bloqueado" id="ramo_Nivel2_3" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Física</div>
-  <div class="ramo bloqueado" id="ramo_Nivel2_4" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Fundamentos del Quehacer Farmacéutico</div>
-  <div class="ramo bloqueado" id="ramo_Nivel2_5" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Bioestadística</div>
-  <div class="ramo bloqueado" id="ramo_Nivel2_6" data-prerrequisitos="ramo_Nivel1_1,ramo_Nivel1_2,ramo_Nivel1_3,ramo_Nivel1_4,ramo_Nivel1_5,ramo_Nivel1_6">Ética</div>
+  <!-- SEMESTRE 2 -->
+  <div class="nivel">
+    <h2>Nivel 2</h2>
+    <div class="ramo" id="ramo_N2_1" data-prerrequisitos="ramo_N1_1,ramo_N1_2,ramo_N1_3,ramo_N1_4,ramo_N1_5,ramo_N1_6">Química General II</div>
+    <div class="ramo" id="ramo_N2_2" data-prerrequisitos="ramo_N1_5">Cálculo Diferencial</div>
+    <div class="ramo" id="ramo_N2_3" data-prerrequisitos="ramo_N1_5">Física</div>
+    <div class="ramo" id="ramo_N2_4" data-prerrequisitos="ramo_N1_4">Fundamentos del Quehacer Farmacéutico</div>
+    <div class="ramo" id="ramo_N2_5" data-prerrequisitos="ramo_N1_5">Bioestadística</div>
+    <div class="ramo" id="ramo_N2_6" data-prerrequisitos="">Ética</div>
+  </div>
 
-  <!-- Semestre 3 -->
-  <div class="ramo bloqueado" id="ramo_Nivel3_1" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Salud Poblacional</div>
-  <div class="ramo bloqueado" id="ramo_Nivel3_2" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Química Analítica Cualicuantitativa</div>
-  <div class="ramo bloqueado" id="ramo_Nivel3_3" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Química Orgánica</div>
-  <div class="ramo bloqueado" id="ramo_Nivel3_4" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Fisiología Integrada</div>
-  <div class="ramo bloqueado" id="ramo_Nivel3_5" data-prerrequisitos="ramo_Nivel2_1,ramo_Nivel2_2,ramo_Nivel2_3,ramo_Nivel2_4,ramo_Nivel2_5,ramo_Nivel2_6">Fisicoquímica</div>
+  <!-- SEMESTRE 3 -->
+  <div class="nivel">
+    <h2>Nivel 3</h2>
+    <div class="ramo" id="ramo_N3_1" data-prerrequisitos="ramo_N2_5">Salud Poblacional</div>
+    <div class="ramo" id="ramo_N3_2" data-prerrequisitos="ramo_N2_1">Química Analítica Cualicuantitativa</div>
+    <div class="ramo" id="ramo_N3_3" data-prerrequisitos="ramo_N2_1">Química Orgánica</div>
+    <div class="ramo" id="ramo_N3_4" data-prerrequisitos="ramo_N2_3">Fisiología Integrada</div>
+    <div class="ramo" id="ramo_N3_5" data-prerrequisitos="ramo_N2_1,ramo_N2_3">Fisicoquímica</div>
+  </div>
 
-  <!-- Semestre 4 -->
-  <div class="ramo bloqueado" id="ramo_Nivel4_1" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Gestión Personal y Habilidades para la Vida</div>
-  <div class="ramo bloqueado" id="ramo_Nivel4_2" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Epidemiología</div>
-  <div class="ramo bloqueado" id="ramo_Nivel4_3" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Análisis Químico Instrumental</div>
-  <div class="ramo bloqueado" id="ramo_Nivel4_4" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Fisiopatología</div>
-  <div class="ramo bloqueado" id="ramo_Nivel4_5" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Bioquímica General</div>
-  <div class="ramo bloqueado" id="ramo_Nivel4_6" data-prerrequisitos="ramo_Nivel3_1,ramo_Nivel3_2,ramo_Nivel3_3,ramo_Nivel3_4,ramo_Nivel3_5">Química Orgánica Avanzada</div>
+  <!-- SEMESTRE 4 -->
+  <div class="nivel">
+    <h2>Nivel 4</h2>
+    <div class="ramo" id="ramo_N4_1" data-prerrequisitos="">Gestión Personal y Habilidades para la Vida</div>
+    <div class="ramo" id="ramo_N4_2" data-prerrequisitos="ramo_N3_1">Epidemiología</div>
+    <div class="ramo" id="ramo_N4_3" data-prerrequisitos="ramo_N3_2">Análisis Químico Instrumental</div>
+    <div class="ramo" id="ramo_N4_4" data-prerrequisitos="ramo_N3_4">Fisiopatología</div>
+    <div class="ramo" id="ramo_N4_5" data-prerrequisitos="ramo_N3_2,ramo_N3_3">Bioquímica General</div>
+    <div class="ramo" id="ramo_N4_6" data-prerrequisitos="ramo_N3_3">Química Orgánica Avanzada</div>
+  </div>
 
-  <!--Semestre 5 -->
-  <div class="ramo bloqueado" id="ramo_Nivel5_1" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Farmacología I</div>
-  <div class="ramo bloqueado" id="ramo_Nivel5_2" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Tecnología Farmacéutica I</div>
-  <div class="ramo bloqueado" id="ramo_Nivel5_3" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Química Farmacéutica I</div>
-  <div class="ramo bloqueado" id="ramo_Nivel5_4" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Microbiología General</div>
-  <div class="ramo bloqueado" id="ramo_Nivel5_5" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Persona y Sociedad</div>
-  <div class="ramo bloqueado" id="ramo_Nivel5_6" data-prerrequisitos="ramo_Nivel4_1,ramo_Nivel4_2,ramo_Nivel4_3,ramo_Nivel4_4,ramo_Nivel4_5,ramo_Nivel4_6">Salud Digital</div>
+  <!-- SEMESTRE 5 -->
+  <div class="nivel">
+    <h2>Nivel 5</h2>
+    <div class="ramo" id="ramo_N5_1" data-prerrequisitos="ramo_N4_4">Farmacología I</div>
+    <div class="ramo" id="ramo_N5_2" data-prerrequisitos="ramo_N3_2">Tecnología Farmacéutica I</div>
+    <div class="ramo" id="ramo_N5_3" data-prerrequisitos="ramo_N4_6">Química Farmacéutica I</div>
+    <div class="ramo" id="ramo_N5_4" data-prerrequisitos="ramo_N3_3">Microbiología General</div>
+    <div class="ramo" id="ramo_N5_5" data-prerrequisitos="">Persona y Sociedad</div>
+    <div class="ramo" id="ramo_N5_6" data-prerrequisitos="">Salud Digital</div>
+  </div>
+  
+    <!-- SEMESTRE 6 -->
+  <div class="nivel">
+    <h2>Nivel 6</h2>
+    <div class="ramo" id="ramo_N6_1" data-prerrequisitos="ramo_N5_1">Farmacología II</div>
+    <div class="ramo" id="ramo_N6_2" data-prerrequisitos="ramo_N5_2">Tecnología Farmacéutica II</div>
+    <div class="ramo" id="ramo_N6_3" data-prerrequisitos="ramo_N5_3">Química Farmacéutica II</div>
+    <div class="ramo" id="ramo_N6_4" data-prerrequisitos="">Bioética</div>
+    <div class="ramo" id="ramo_N6_5" data-prerrequisitos="">Electivo 1 Formación Integral</div>
+  </div>
 
-  <!-- Semestre 6 -->
-  <div class="ramo bloqueado" id="ramo_Nivel6_1" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Farmacología II</div>
-  <div class="ramo bloqueado" id="ramo_Nivel6_2" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Tecnología Farmacéutica II</div>
-  <div class="ramo bloqueado" id="ramo_Nivel6_3" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Química Farmacéutica II</div>
-  <div class="ramo bloqueado" id="ramo_Nivel6_4" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Bioética</div>
-  <div class="ramo bloqueado" id="ramo_Nivel6_5" data-prerrequisitos="ramo_Nivel5_1,ramo_Nivel5_2,ramo_Nivel5_3,ramo_Nivel5_4,ramo_Nivel5_5,ramo_Nivel5_6">Electivo 1 Formación Integral</div>
+  <!-- SEMESTRE 7 -->
+  <div class="nivel">
+    <h2>Nivel 7</h2>
+    <div class="ramo" id="ramo_N7_1" data-prerrequisitos="">Electivo 2 Formación Integral</div>
+    <div class="ramo" id="ramo_N7_2" data-prerrequisitos="ramo_N6_4">Metodología de la Investigación</div>
+    <div class="ramo" id="ramo_N7_3" data-prerrequisitos="ramo_N6_1">Farmacia Clínica</div>
+    <div class="ramo" id="ramo_N7_4" data-prerrequisitos="">Farmacognosia y Fitoterapia</div>
+    <div class="ramo" id="ramo_N7_5" data-prerrequisitos="ramo_N6_3">Control y Aseguramiento de la Calidad</div>
+    <div class="ramo" id="ramo_N7_6" data-prerrequisitos="">Legislación Farmacéutica</div>
+  </div>
 
-  <!-- Semestre 7 -->
-  <div class="ramo bloqueado" id="ramo_Nivel7_1" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Electivo 2 Formación Integral</div>
-  <div class="ramo bloqueado" id="ramo_Nivel7_2" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Metodología de la Investigación</div>
-  <div class="ramo bloqueado" id="ramo_Nivel7_3" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Farmacia Clínica</div>
-  <div class="ramo bloqueado" id="ramo_Nivel7_4" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Farmacognosia y Fitoterapia</div>
-  <div class="ramo bloqueado" id="ramo_Nivel7_5" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Control y Aseguramiento de la Calidad</div>
-  <div class="ramo bloqueado" id="ramo_Nivel7_6" data-prerrequisitos="ramo_Nivel6_1,ramo_Nivel6_2,ramo_Nivel6_3,ramo_Nivel6_4,ramo_Nivel6_5">Legislación Farmacéutica</div>
+  <!--SEMESTRE 8 -->
+  <div class="nivel">
+    <h2>Nivel 8</h2>
+    <div class="ramo" id="ramo_N8_1" data-prerrequisitos="ramo_N7_3">Farmacia Clínica</div>
+    <div class="ramo" id="ramo_N8_2" data-prerrequisitos="ramo_N6_1">Toxicología</div>
+    <div class="ramo" id="ramo_N8_3" data-prerrequisitos="ramo_N6_3">Biofarmacia</div>
+    <div class="ramo" id="ramo_N8_4" data-prerrequisitos="ramo_N7_3">Farmacia Asistencial</div>
+    <div class="ramo" id="ramo_N8_5" data-prerrequisitos="">Gestión y Marketing Farmacéutico</div>
+    <div class="ramo" id="ramo_N8_6" data-prerrequisitos="">Farmacovigilancia y Tecnovigilancia</div>
+    <div class="ramo" id="ramo_N8_7" data-prerrequisitos="">Electivo 3 Formación Integral</div>
+  </div>
 
-  <!-- Semestre 8 -->
-  <div class="ramo bloqueado" id="ramo_Nivel8_1" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Farmacia Clínica</div>
-  <div class="ramo bloqueado" id="ramo_Nivel8_2" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Toxicología</div>
-  <div class="ramo bloqueado" id="ramo_Nivel8_3" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Biofarmacia</div>
-  <div class="ramo bloqueado" id="ramo_Nivel8_4" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Farmacia Asistencial</div>
-  <div class="ramo bloqueado" id="ramo_Nivel8_5" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Gestión y Marketing Farmacéutico</div>
-  <div class="ramo bloqueado" id="ramo_Nivel8_6" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Farmacovigilancia y Tecnovigilancia</div>
-  <div class="ramo bloqueado" id="ramo_Nivel8_7" data-prerrequisitos="ramo_Nivel7_1,ramo_Nivel7_2,ramo_Nivel7_3,ramo_Nivel7_4,ramo_Nivel7_5,ramo_Nivel7_6">Electivo 3 Formación Integral</div>
+  <!-- SEMESTRE 9 -->
+  <div class="nivel">
+    <h2>Nivel 9</h2>
+    <div class="ramo" id="ramo_N9_1" data-prerrequisitos="ramo_N8_1,ramo_N8_2,ramo_N8_3">Electivo 1 (Disciplina)</div>
+    <div class="ramo" id="ramo_N9_2" data-prerrequisitos="ramo_N8_1,ramo_N8_2,ramo_N8_3">Electivo 2 (Disciplina)</div>
+    <div class="ramo" id="ramo_N9_3" data-prerrequisitos="ramo_N8_1,ramo_N8_2,ramo_N8_3">Electivo 3 (Disciplina)</div>
+    <div class="ramo" id="ramo_N9_4" data-prerrequisitos="ramo_N8_1,ramo_N8_2,ramo_N8_3">Práctica I</div>
+  </div>
 
-  <!-- Semestre 9 -->
-  <div class="ramo bloqueado" id="ramo_Nivel9_1" data-prerrequisitos="ramo_Nivel8_1,ramo_Nivel8_2,ramo_Nivel8_3,ramo_Nivel8_4,ramo_Nivel8_5,ramo_Nivel8_6,ramo_Nivel8_7">Electivo 1 (Disciplina)</div>
-  <div class="ramo bloqueado" id="ramo_Nivel9_2" data-prerrequisitos="ramo_Nivel8_1,ramo_Nivel8_2,ramo_Nivel8_3,ramo_Nivel8_4,ramo_Nivel8_5,ramo_Nivel8_6,ramo_Nivel8_7">Electivo 2 (Disciplina)</div>
-  <div class="ramo bloqueado" id="ramo_Nivel9_3" data-prerrequisitos="ramo_Nivel8_1,ramo_Nivel8_2,ramo_Nivel8_3,ramo_Nivel8_4,ramo_Nivel8_5,ramo_Nivel8_6,ramo_Nivel8_7">Electivo 3 (Disciplina)</div>
-  <div class="ramo bloqueado" id="ramo_Nivel9_4" data-prerrequisitos="ramo_Nivel8_1,ramo_Nivel8_2,ramo_Nivel8_3,ramo_Nivel8_4,ramo_Nivel8_5,ramo_Nivel8_6,ramo_Nivel8_7">Práctica I</div>
-
-  <!-- Semestre 10 -->
-  <div class="ramo bloqueado" id="ramo_Nivel10_1" data-prerrequisitos="ramo_Nivel9_1,ramo_Nivel9_2,ramo_Nivel9_3,ramo_Nivel9_4">Práctica II</div>
-</div>
+  <!-- SEMESTRE 10 -->
+  <div class="nivel">
+    <h2>Nivel 10</h2>
+    <div class="ramo" id="ramo_N10_1" data-prerrequisitos="ramo_N9_4">Práctica II</div>
+  </div>
+  
+  <div class="contenedor-malla">
+    <link rel="stylesheet" href="estilo.css" />
+<script src="script.js" defer></script>
