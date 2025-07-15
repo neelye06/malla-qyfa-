@@ -36,6 +36,7 @@ h1 {
 .nivel h2 {
   text-align: center;
   color: #ad1457;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
 
@@ -58,7 +59,9 @@ h1 {
 } 
 
 .ramo.aprobado {
-  background-color: #e9c7ff;
+  background-color: #ecea6ff;
+  border: 2px solid #996cf3;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
   color: white;
   text-decoration: line-through;
 }
