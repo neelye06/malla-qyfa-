@@ -36,7 +36,6 @@ h1 {
 .nivel h2 {
   text-align: center;
   color: #ad1457;
-  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
 
@@ -50,6 +49,7 @@ h1 {
   text-align: center;
   transition: 0.3s ease;
   font-weight: bold;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .ramo.bloqueado {
@@ -59,7 +59,7 @@ h1 {
 } 
 
 .ramo.aprobado {
-  background-color: #ecea6ff;
+  background-color:  #c1aaee;
   border: 2px solid #996cf3;
   box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
   color: white;
