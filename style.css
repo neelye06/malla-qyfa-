@@ -40,7 +40,7 @@ h1 {
 }
 
 .ramo {
-  background-color: #fe8ab8;
+  background-color: #f48fb1;
   border: 2px solid #ad1457;
   margin: 5px 0;
   padding: 10px;
@@ -60,9 +60,9 @@ h1 {
 
 .ramo.aprobado {
   background-color:  #c1aaee;
-  border: 2px solid #9d5dff;
+  border: 2px solid #7835b4;
   box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
-  color: #9d5dff;
+  color: #7835b4;
   text-decoration: line-through;
 }
 
