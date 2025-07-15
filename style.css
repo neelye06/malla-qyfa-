@@ -46,21 +46,18 @@ h1 {
   font-weight: bold;
 }
 
-/* Bloqueado = gris rosado */
 .ramo.bloqueado {
   background-color: #f2c9d7;
   opacity: 0.5;
   cursor: not-allowed;
-}
+} 
 
-/* Aprobado = morado y tachado */
 .ramo.aprobado {
   background-color: #ba68c8;
   color: white;
   text-decoration: line-through;
 }
 
-/* Al pasar por encima */
 .ramo:not(.bloqueado):hover {
   background-color: #f48fb1;
 }
