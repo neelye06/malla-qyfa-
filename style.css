@@ -65,6 +65,7 @@ h1 {
   box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
   color: #7835b4;
   text-decoration: line-through;
+  font-style: italic;
 }
 
 .ramo:not(.bloqueado):hover {
